@@ -9,7 +9,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " Status bar
 set laststatus=2
-
 " backspace in insert mode works like normal editor 
 set backspace=2         
 
@@ -23,9 +22,11 @@ set ignorecase
 
 " Color scheme (terminal)
 set t_Co=256
-
+"highlight current line
+set cursorline
 " indentLine character
 let g:indentLine_char ='┆'
+let base16colorspace=256
 
 call vundle#begin()
     
@@ -53,6 +54,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'isRuslan/vim-es6'
 Plugin 'honza/vim-snippets'
+
+Plugin 'chriskempson/base16-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()
 " show line numbers 
@@ -60,7 +63,6 @@ set number
 
 " set ctrl+n start NERDTree
 map <C-n> :NERDTreeToggle<CR>
-
 let g:javascript_enable_domhtmlcss = 1
 
 let g:neocomplete#enable_at_startup = 1
@@ -73,7 +75,8 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " Syntax and colorscheme
 syntax on
-colorscheme jellyx
+"colorscheme jellyx
+colorscheme base16-default-dark
 
 " activates indenting for files
 filetype plugin indent on
