@@ -56,6 +56,14 @@ Plugin 'isRuslan/vim-es6'
 Plugin 'honza/vim-snippets'
 
 Plugin 'chriskempson/base16-vim'
+
+" required by tsuquyomi
+Plugin 'Shougo/vimproc.vim'
+"client for TSServer
+Plugin 'Quramy/tsuquyomi'
+"typescript syntax
+Plugin 'leafgarland/typescript-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 " show line numbers 
