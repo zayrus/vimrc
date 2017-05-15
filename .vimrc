@@ -4,7 +4,7 @@ set nocompatible
 "Helps force plugins to load correctly when it is turned back on below,required
 filetype off 
 
-" Status bar
+  " Status bar
 set rtp+=~/.vim/bundle/Vundle.vim
 
 " Status bar
@@ -41,14 +41,23 @@ Plugin 'vim-airline/vim-airline-themes'
 
 "show modified lines from last commit
 Plugin 'airblade/vim-gitgutter'
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'othree/yajs.vim'
 Plugin 'Shougo/neocomplete'
 Plugin 'Yggdroot/indentLine'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'SirVer/ultisnips'
+Plugin 'tpope/vim-commentary'
+
+"este coso busca 
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l —nocolor —hidden -g ""'
 
 "snipets
+Plugin 'SirVer/ultisnips'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
